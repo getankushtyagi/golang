@@ -12,4 +12,10 @@ func main() {
 	} else {
 		fmt.Println("adult")
 	}
+
+
+	// also add a new variable in if else this is how it works 
+	if grade:=12; grade>=12{
+		fmt.Println("good to go ")
+	}
 }
