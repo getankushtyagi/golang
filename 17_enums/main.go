@@ -16,7 +16,6 @@ const (
 )
 
 // we can also create enums for string also but iota is not used then
-
 const (
 	Pending UserStatus = "pending"
 	Onboard            = "onboard "
