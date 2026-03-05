@@ -21,7 +21,7 @@ func NewOrder(Id int, Name string, Status string) *order {
 	}
 }
 
-// create a function which runs on struct
+// create a function which runs on struct here we use * because it chnage the value so must be reflect top the orignal place other status is like copy 
 func (o *order) changeStatus(status string) {
 	o.status = status
 }

@@ -30,6 +30,12 @@ func printIntString[T int|string](items[] T){
 		fmt.Print(i)
 	}
 }
+
+//how we can implement generic in struct
+type stack[T any] struct{
+	element []T
+}
+
 func main(){
 
 	printSlice([]int{1,2,3,4,5,5})
@@ -40,4 +46,9 @@ func main(){
 	// printIntString([]bool{true}) // getting error 
 	printIntString([]string{"true"}) 
 
+
+	mystack:= stack[string]{
+		element: []string{"golang"},
+	}
+	fmt.Println(mystack)
 }
