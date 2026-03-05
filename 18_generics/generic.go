@@ -18,7 +18,7 @@ func printSlice(items[] int ){
 
 //now lets create the genereic 
 
-func print[T any](items[]T){ // but it all all type of data types which is wrong practise 
+func print[T any](items[]T){ // but it all accept type of data types which is wrong practise 
 	for _ , i:=range(items){
 		fmt.Println(i)
 	}
