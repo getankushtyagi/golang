@@ -27,6 +27,19 @@ func main() {
 
 
 
+
+	// as we see above we have face deadlock because we are trying to send the value in channel but no one is receiving it 
+	// and also we are trying to receive the value from channel but no one is sending it so this is the deadlock
+
+	// to avoid this we can use go routine and also we can use buffered channel
+
+	bufferedChannel := make(chan int, 2) // this is the buffered channel with capacity of 2
+
+	bufferedChannel <- 10 // this is how we send the value in buffered channel 
+	bufferedChannel <- 20 // this is how we send the value in buffered channel
+
+	fmt.Println(<-bufferedChannel) // this is how we receive the value from buffered channel 
+	fmt.Println(<-bufferedChannel) // this is how we receive the value from buffered channel
 }
 
 func add(result chan int, num1 int, num2 int) {
